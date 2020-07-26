@@ -50,37 +50,43 @@
         <div class="container">
             <div class="row">
                 <div class="container d-flex justify-content-center py-5 ">
-                    <div class=" col-md-6 border border-danger rounded py-5 text-center " style="background-color:white;opacity:.85!important;">
+                    <div class="col-md-6 border border-danger rounded pt-5 pb-3 text-center " style="background-color:white;opacity:.80!important;">
 
 
                         <span class="fa-stack fa-5x animated infinite pulse" style="color:red;position:absolute;top:-80px; left: 0; right: 0; margin: auto">
                             <i class="fas fa-heart fa-stack-2x"></i>
-                            <p style="color:white;position:absolute;top:0px; left: 0; right: 0; margin: auto;font-weight:bolder">Z</p>
+                            <span style="color:white;position:absolute;top:0px; left: 0; right: 0; margin: auto;font-weight:bolder">Z</span>
                         </span>
                         <br /><br />
 
                         <!--<h4>To the woman that I love to the woman who owns my heart</h4>-->
 
-                        <h5 id="message" class=" animated fadeInLeft text-primary font-weight-bold px-4"></h5>
+                        <h5 id="message" class="animated fadeInLeft text-primary font-weight-bold px-4"></h5>
+                        <hr />
 
 
                         <div class="row no-gutters">
-                            <div class="col p-2   text-danger">
-                                <h3 class=" animated fadeInUp ">Love Story since <br />'  <span id="startday"></span> '</h3>
-                                <hr />
-                                <h4 class=" animated slideInDown"><span class="count" id="seconds"></span> Seconds</h4>
-                                <h4 class=" animated slideInLeft"><span class="count" id="minets"></span> Minutes</h4>
-                                <h4 class=" animated bounceIn"><span class="count" id="hours"></span> Hours</h4>
-                                <h4 class=" animated slideInUp"><span class="count" id="days"></span> Days</h4>
-                                <h4 class=" animated slideInRight"><span class="count" id="weeks"></span> Weeks</h4>
-                                <h4 class=" animated slideInLeft"><span class="count" id="months"></span> Months</h4>
-                                <h4 class=" animated slideInDown"><span class="count" id="years"></span> Year</h4>
+                            <div class="col p-2 text-danger">
+                                <h3 class="animated fadeInUp">Love Story since <br />'  <strong><span id="startday"></span></strong> '</h3>
+                                <br />
+
+                                <h4 class="animated slideInDown"><span class="count" id="seconds"></span> Seconds</h4>
+                                <h4 class="animated slideInLeft"><span class="count" id="minets"></span> Minutes</h4>
+                                <h4 class="animated bounceIn"><span class="count" id="hours"></span> Hours</h4>
+                                <h4 class="animated slideInUp"><span class="count" id="days"></span> Days</h4>
+                                <h4 class="animated slideInRight"><span class="count" id="weeks"></span> Weeks</h4>
+                                <h4 class="animated slideInLeft"><span class="count" id="months"></span> Months</h4>
+                                <h4 class="animated slideInDown"><span class="count" id="years"></span> Year</h4>
                             </div>
 
                         </div>
 
                         <!--<h3 class=" animated fadeInRight">From the day When it all started when you entered my life and took me to the light</h3>-->
                         <i style="color:red" class="fas fa-grin-hearts fa-2x"></i>
+                        <hr />
+
+
+                        <a href="https://www.facebook.com/Gipsy.EG" target="_blank" class="font-weight-bold">Powered By Gipsy</a>
 
 
                     </div>
@@ -109,32 +115,32 @@
     </script>
     <script>
         function myTimer() {
-            const date1 = new Date('10/17/1990 15:21');
+            const date1 = new Date('12/20/2019 18:00');
             $('#startday').text(date1.toDateString());
 
             const date2 = new Date();
             var diffTime = Math.abs(date2.getTime() - date1.getTime());
 
             var diffseconds = diffTime / (1000);
-            $('#seconds').text(diffseconds.toFixed(2));
+            $('#seconds').text(diffseconds.toFixed());
 
             var diffminets = diffTime / (1000 * 60);
-            $('#minets').text(diffminets.toFixed(2));
+            $('#minets').text(diffminets.toFixed());
 
             var diffhours = diffTime / (1000 * 60 * 60);
-            $('#hours').text(diffhours.toFixed(2));
+            $('#hours').text(diffhours.toFixed());
 
             var diffDays = diffTime / (1000 * 60 * 60 * 24);
-            $('#days').text(diffDays.toFixed(2));
+            $('#days').text(diffDays.toFixed());
 
             var diffweaks = diffTime / (1000 * 60 * 60 * 24 * 7);
-            $('#weeks').text(diffweaks.toFixed(2));
+            $('#weeks').text(diffweaks.toFixed());
 
             var diffmonths = diffTime / (1000 * 60 * 60 * 24 * 30);
-            $('#months').text(diffmonths.toFixed(2));
+            $('#months').text(diffmonths.toFixed());
 
             var diffyears = diffTime / (1000 * 60 * 60 * 24 * 365);
-            $('#years').text(diffyears.toFixed(2));
+            $('#years').text(diffyears.toFixed());
         };
 
         //function tmyTimer() {
@@ -204,7 +210,7 @@
                     duration: 3000,
                     easing: 'swing',
                     step: function (now) {
-                        $(this).text(now.toFixed(2));
+                        $(this).text(now.toFixed());
 
 
 
